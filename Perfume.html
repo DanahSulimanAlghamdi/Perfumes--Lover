@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume</title>
+  <link rel="stylesheet" href="perfume.css">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="logo-item">
+                <a href="./home.html">
+                    <img src="media/logo.png" alt="Logo" class="logo">
+                </a>
+            </li>
+            <li><a href="Perfume.html">Perfume</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<p>
+ <img src="media/wal1.png" width="1420" height="250"  alt="Photo">
+ 
+ <img src="media/wal2.png" width="1420" height="250" alt="Photo">
+ </p>
+
+
+<div class="container">
+  <div class="perfume-card" onclick="showIngredients('Jean Paul Gaultier Scandal', 'Musk, honey, sandalwood, tonka bean')">
+    <img src="media/scandal.jpg" alt="Scandal">
+    <h3>JEAN PAUL GAULTIER</h3>
+    <p>Scandal By Night</p>
+    <button>View Ingredients</button>
+  </div>
+
+  <div class="perfume-card" onclick="showIngredients('COCO Chanel', 'Rose, jasmine')">
+    <img src="media/coco.jpg" alt="Coco Chanel">
+    <h3>CHANEL</h3>
+    <p>COCO</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Givenchy LInterdit', 'Ginger, Orange Blossom, Jasmine, Tuberose, Patchouli, Vetiver')">
+    <img src="media/giv.jpg" alt="Givenchy L'Interdit">
+    <h3>GIVENCHY</h3>
+    <p>L'Interdit</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Libre Saint Laurent', 'Lavender Essence, Orange Blossom, Orchid, Warm Vanilla')">
+    <img src="media/libre.jpg" alt="Libre Saint Laurent">
+    <h3>SAINT LAURENT</h3>
+    <p>Libre</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Versace Crystal Noir', 'Blackcurrant, Black Fig, Violet')">
+    <img src="media/versace.jpg" alt="Versace">
+    <h3>VERSACE</h3>
+    <p>Crystal Noir</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Valentino Donna Born', 'Blackcurrant, Jasmine Grandiflorum, Bourbon Vanilla')">
+    <img src="media/val.jpg" alt="Valentino">
+    <h3>VALENTINO</h3>
+    <p>Donna Born</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Dior Poison Girl', 'Orange, tonka bean,blossoms, Grasse Rose')">
+    <img src="media/poison.jpg" alt="poison">
+    <h3>DIOR</h3>
+    <p>Poison Girl</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Miss Dior', 'Rose, lily of the valley, soft musk')">
+    <img src="media/miss_dior.jpg" alt="Miss Dior">
+    <h3>DIOR</h3>
+    <p>Miss Dior</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('Prada Paradoxe Intense', 'citrus, sweet, vanilla, powdery, fruity')">
+    <img src="media/prada.jpg" alt="prada">
+    <h3>PRADA</h3>
+    <p>Paradoxe Intense</p>
+    <button>View Ingredients</button>
+  </div>
+
+<div class="perfume-card" onclick="showIngredients('CHANEL CHANCE EAU TENDRE', 'fruity, sweet, fresh spicy, powdery, musky')">
+    <img src="media/chance.jpg" alt="CHANCE EAU TENDRE">
+    <h3>CHANEL</h3>
+    <p>Chance Eau Tendre</p>
+    <button>View Ingredients</button>
+  </div>
+
+
+</div>
+
+<!-- Modal for displaying ingredients -->
+<div id="ingredientModal" class="modal">
+  <div class="modal-content">
+    <h3 id="perfumeName">""</h3>
+    <p id="perfumeIngredients"></p>
+    <button class="close-btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  function showIngredients(name, ingredients) {
+    document.getElementById("perfumeName").textContent = name;
+    document.getElementById("perfumeIngredients").textContent = " " + ingredients;
+    document.getElementById("ingredientModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("ingredientModal").style.display = "none";
+  }
+
+  // Close modal when clicking outside the content
+  window.onclick = function(event) {
+    const modal = document.getElementById("ingredientModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<footer>
+        <p>Copyright © 2024 Perfumes Lover.</p>
+       
+    </footer>
+
+
+
+
+</body>
+</html>
